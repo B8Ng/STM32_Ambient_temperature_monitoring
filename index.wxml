@@ -1,0 +1,78 @@
+<view class="container">
+  <!--小程序大标题-->
+  <view class="Head_box">  
+    <view>{{head_title}}</view>
+  </view>
+
+  <!--芯片温度-->
+  <view class="ChipTemperate_box">
+    <view class="ChipTemperate_title">{{chiptemperature_title}}</view>
+    <view class="flex">
+      <view class="ChipTemperate_icon">
+        <image src="../../images/cpu.png"/>
+      </view>
+      <view class="ChipTemperate_value">
+        {{chiptemperature_value}}℃
+      </view>
+    </view>
+  </view>
+
+  <!--连接状态-->
+  <view class="Info_box" bind:tap="showPopup">
+    <view>
+      <van-icon wx:if="{{!show}}" name="info-o" />
+      <van-icon wx:if="{{show}}" name="info" />
+        OneNet服务器
+    </view>
+    <view style="color:{{isConnect?'RGB(0,176,80)':'RGB(192,0,0)'}}">
+      {{isConnect?'已连接':'未连接'}}
+    </view>
+  </view>
+
+  <!--外部传感器设备-->
+  <view class="Sensers_title">
+    传感器设备
+  </view>
+  <view class="Sensers_box">
+    <view wx:for="{{sensorslist}}" wx:key="key" class="system-info">
+      <view class="Sensers_Box1">
+        <image src="{{item.img}}" style="width: 80rpx;margin-top: 60rpx;" mode="widthFix" />
+      </view>
+      <view class="Sensers_Box2">
+        <view>
+          {{item.parameter}}
+        </view>
+        <view>
+          {{item.value}}{{item.unit}}
+        </view>
+        <view>
+          {{item.name}}  
+        </view>
+      </view>
+      <view class="Sensers_Box3"></view>
+    </view>
+  </view>
+  <view class="OtherSensors_Title">
+    其他设备
+  </view>
+  <view class="OtherSensors_box" >
+    <view style="display: flex;justify-content: space-between;">
+      <view class="flex">
+        <image src="/images/lamp.png" style="width: 75rpx; margin-top: 10rpx;" mode="widthFix" />
+        <view style="margin:15rpx 0 0 5rpx;">{{Ledname}}</view>
+        <view style="margin:12rpx 0 0 115rpx;">
+          <switch checked="{{LedisOpen}}" bindchange="onChange"/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>>
+
+
+
+ 
+<van-popup show="{{ show }}" bind:close="onClose"  round position="top" custom-style="height: 20%" lock-scroll="{{true}}">
+  <view class="popup">
+    嵌入式云控制APPv1.0
+  </view>
+</van-popup>

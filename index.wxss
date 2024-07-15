@@ -1,0 +1,123 @@
+.Head_box{
+  display: flex;
+  justify-content: center;
+  padding-top: 140rpx;
+}
+
+.Head_box >view {
+  font-size: 55rpx;
+  font-weight: 600;
+  line-height: 100rpx;
+}
+
+.ChipTemperate_box{
+  height: 200rpx;
+  margin: 20rpx 150rpx 0;
+  box-shadow: 0 8rpx 20rpx 0 rgba(0,0,0,0.3);
+  background-color:white;
+  border-radius: 30rpx;
+}
+.ChipTemperate_title{
+  padding-top: 6rpx;
+  font-size: 40rpx;
+  text-align: center;
+  color: #9fbcf9;
+}
+
+.flex{
+  display: flex;
+}
+
+.ChipTemperate_icon{
+  width: 50%;
+}
+
+.ChipTemperate_icon >image{
+  margin-top: 10rpx;
+  margin-left: 70rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.ChipTemperate_value{
+  padding-top: 20rpx;
+  font-size: 45rpx;
+  text-align: center;
+  font-weight: 600;
+  line-height: 100rpx;
+}
+
+.Info_box{
+  display: flex;
+  padding: 0 30rpx;
+  justify-content: space-between;
+  height: 120rpx;
+  margin: 38rpx 32rpx 0;
+  box-shadow: 0 8rpx 20rpx 0 rgba(0,0,0,0.3);
+  background-color:white;
+  border-radius: 32rpx;
+  font-size: 49rpx;
+  line-height: 120rpx;
+}
+
+.Sensers_title{
+  margin: 32rpx 0 32rpx 34rpx;
+  font-size: 49rpx;
+}
+.Sensers_box{
+  margin: 0 0 32rpx 34rpx;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.Sensers_Box1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150rpx;
+  margin-left: 40rpx;
+}
+.Sensers_Box2>view{
+  margin: 18rpx 0 0 42rpx;
+  width: 190rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.Sensers_Box3{
+  color:red;
+  font-size: 65rpx;
+}
+
+.OtherSensors_Title{
+  margin: 32rpx 0 32rpx 34rpx;
+  font-size: 49rpx;
+}
+
+.OtherSensors_box{
+  display: flex;
+  height: 100rpx;
+  margin: 40rpx 150rpx;
+  box-shadow: 0 8rpx 20rpx 0 rgba(0,0,0,0.3);
+  background-color:white;
+  border-radius: 32rpx;
+  font-size: 50rpx;
+}
+
+.system-info{
+  display: flex;
+  height: 205rpx;
+  width: 330rpx;
+  border-radius: 30rpx;
+  margin: 0 23rpx 23rpx 0;
+  box-shadow: 0 8rpx 20rpx 0 rgba(0,0,0,0.3);
+  background-color:white;
+}
+
+
+.popup {
+  padding: 150rpx 0 0 100rpx;
+  font-size: 55rpx;
+  font-weight: 600;
+  line-height: 100rpx;
+}
